@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Heart</title>
+    <style>
+        /* Estilos adicionales */
+        .heart {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .heart .text-above {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .heart .mid {
+            width: 30px;
+            height: 30px;
+            background-color: #ffcccc;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        .heart .heart-shape {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: heartbeat 1s infinite;
+        }
+        .heart .heart-shape:before,
+        .heart .heart-shape:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background-color: #ffcc00;
+            border-radius: 50px 50px 0 0;
+        }
+        .heart .heart-shape:before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart .heart-shape:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        .heart .text-below {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-top: 20px;
+        }
+        .highlighted-text {
+            color: #ff3300; /* Color de texto destacado */
+            font-size: 24px; /* Tamaño de fuente más grande */
+            font-weight: bold; /* Texto en negrita */
+            font-style: italic; /* Texto en cursiva */
+            text-shadow: 2px 2px 2px #999; /* Sombra de texto */
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="heart">
+    <div class="text-above">De <span class="highlighted-text">Faster Academy</span></div>
+    <div class="mid"></div>
+    <div class="heart-shape"></div>
+    <div class="text-below">Para esa persona <span class="highlighted-text">L.</span></div>
+</div>
+
+</body>
+</html>
